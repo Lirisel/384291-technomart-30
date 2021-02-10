@@ -543,6 +543,7 @@ user-navigation a {
 .company-information {
   color: var(--basic-black);
   display: flex;
+
 }
 .about-company {
   flex-basis: 460px;
