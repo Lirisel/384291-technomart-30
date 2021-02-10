@@ -34,16 +34,13 @@
   font-weight: 400;
   color: var(--basic-white);
   min-height: 100%;
+  box-sizing: border-box;
 
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
 }
-body{
-  box-sizing: border-box;
 
-  font-style: normal;
-}
 .wrapper {
   width: 940px;
   margin: 0 auto;
@@ -79,9 +76,7 @@ li {
 
 .header {
   background-color: var(--header-color);
-  border-bottom: 2px solid var(--dark-header-color) ;
-  /*drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))*/
-}
+ }
 
 
 /*Верхний блок хедера*/
@@ -289,7 +284,8 @@ user-navigation a {
   margin-top: 5px;
 }
 .slider-item-button {
-  background-color: none; /*не работает*/
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
 }
 .slider-buttons{
   display: flex;
@@ -298,9 +294,11 @@ user-navigation a {
 }
 .button-left {
   margin-left: 24px;
+  background-color: none;
 }
 .button-rught {
   margin-right: 21px;
+  background-color: none;
 }
 .red-button-link {
   width: 192px;
@@ -339,7 +337,6 @@ user-navigation a {
   margin-top: 14px;
   text-transform: uppercase;
   text-align: center;
-  border: 1px solid ivory;
   background-color: rgba(0, 0, 0, 0.1)
 
 }
