@@ -24,12 +24,25 @@
 
 /* Global */
 
+.page-body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--basic-white);
+  min-height: 100%;
+
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
 body{
   box-sizing: border-box;
-  font-family: "Cuprum", "Arial", sans-serif;
-  font-weight: 400;
+
   font-style: normal;
-  line-height: 24px;
 }
 .wrapper {
   width: 940px;
@@ -94,11 +107,15 @@ li {
   height: 23px;
 }
 /*Поиск в верхнем блоке хедера*/
-.search-form input {
+.search-form input{
+  background-color: var(--dark-header-color);
+  border: none;
+}
+.search-form input::placeholder {
   background-color: var(--dark-header-color);
   border: none;
   font-size: 18px;
-
+  color: var(--basic-white);
 }
 .search-button {
   background-color: var(--dark-header-color);
@@ -114,19 +131,27 @@ li {
 user-navigation a {
   position: relative;
 }
+.header-bookmarks,
+.header-basket {
+  position: relative;
+}
 .header-bookmarks::before {
   content: "";
   position: absolute;
   background-image: url("../img/icons/icon-bookmark.png");
   width: 14px;
   height: 16px;
+  left: -20px;
+  top: 1px;
 }
 .header-basket::before {
   content: "";
   position: absolute;
-  background-image: url("../img/icons/icon-basket.svg");
+  background-image: url("../img/icons/icon-cart.svg");
   width: 15px;
   height: 15px;
+  left: -20px;
+  top: 1px;
 }
 .header-checkout{
   padding: 12px 16px 12px 19px;
@@ -176,6 +201,7 @@ user-navigation a {
 .contacts-address {
   font-size: 14px;
   margin-top: 5px;
+  color: var(--light-header-color);
 }
 
 .header-authorization {
@@ -247,7 +273,6 @@ user-navigation a {
 .slider-item-top-block {
   height: 104px;
   background: rgba(0, 0, 0, 0.25);
-  color: var(--basic-white);
   margin-bottom: 18px;
 }
 .slider-item-top-block h3 {
@@ -280,7 +305,6 @@ user-navigation a {
 .red-button-link {
   width: 192px;
   height: 26px;
-  color: var(--basic-white);
   background-color: var(--basic-red);
   font-size: 14px;
   text-transform: uppercase;
@@ -297,7 +321,6 @@ user-navigation a {
 .promo-block-item {
   padding-left: 23px;
   padding-top: 20px;
-  color: var(--basic-white);
   position: relative;
   overflow: hidden;
 }
@@ -317,6 +340,8 @@ user-navigation a {
   text-transform: uppercase;
   text-align: center;
   border: 1px solid ivory;
+  background-color: rgba(0, 0, 0, 0.1)
+
 }
 .materials {
   background: var(--materials)  url(../img/icons/icon-bucket.svg) no-repeat 80% 50%;
@@ -451,6 +476,7 @@ user-navigation a {
   width: 100%;
   height: 522px;
   background-color: var(--services-background-color);
+  color: var(--basic-black);
 }
 .services h2 {
   color: var(--basic-black);
@@ -475,7 +501,6 @@ user-navigation a {
 .services-tab button {
   display: block;
   background-color: inherit;
-  color: var(--basic-white);
   font-weight: 700px;
   font-size: 21px;
   line-height: 30px;
@@ -516,7 +541,7 @@ user-navigation a {
 
 /*О компании*/
 .company-information {
-
+  color: var(--basic-black);
   display: flex;
 }
 .about-company {
@@ -609,9 +634,7 @@ footer {
 }
 .copyright {
   margin: 0;
-  font-size: 16px;
   line-height: 18px;
-  color: var(--basic-white);
   margin-top: 36px;
 }
 
@@ -622,27 +645,7 @@ footer {
   display: flex;
   justify-content: flex-start;
 }
-.vkontakte::before {
-  content: "";
-  position: absolute;
-  background-image: url("../img/icons/vcontakte.png");
-  width: 44px;
-  height: 44px;
-}
-.facebook::before {
-  content: "";
-  position: absolute;
-  background-image: url("../img/icons/facebook.png");
-  width: 44px;
-  height: 44px;
-}
-.instagram::before {
-  content: "";
-  position: absolute;
-  background-image: url("../img/icons/icon-insta.svg");
-  width: 44px;
-  height: 44px;
-}
+
 
 .links {
   display: flex;
@@ -651,11 +654,9 @@ footer {
   margin-top: 35px;
 }
 .links p {
-  color: var(--basic-white);
 }
 .links a {
   color: var(--footer-center-block-menu);
-  font-size: 16px;
   line-height: 18px;
 }
 .links .developed {
