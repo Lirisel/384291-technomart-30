@@ -89,7 +89,6 @@ li {
   height: 33px;
   color: #fffff;
   padding-top: 9px;
-  outline: 2px solid blue;
 }
 
 /*Логотип в верхнем блоке хедера*/
@@ -105,10 +104,14 @@ li {
 .search-form input{
   background-color: var(--dark-header-color);
   border: none;
-
+  outline: 2px solid blue;
 }
 .search-form {
   margin-left: -98px;
+  outline: 2px solid red;
+}
+.search-form:focus {
+
 }
 .search-form input::placeholder {
   background-color: var(--dark-header-color);
@@ -123,6 +126,7 @@ li {
   padding: 0;
   padding-left: 5px;
   padding-top: 2px;
+
 }
 
 /*Юзерменю в верхнем блоке хедера*/
@@ -131,16 +135,17 @@ li {
   justify-content: flex-end;
   height: 100%;
   margin: 0;
-  outline: 2px solid red;
   font-size: 18px;
-
+  outline: 2px solid blueviolet;
 }
 user-navigation a {
   position: relative;
+  outline: 2px solid brown;
 }
 .header-bookmarks,
 .header-basket {
   position: relative;
+  outline: 2px solid green;
 }
 .header-basket {
   margin-left: 74px;
@@ -433,7 +438,9 @@ user-navigation a {
 .popular-goods-top-block a {
   margin-top: 23px;
 }
-
+.popular-producers a {
+  margin-right: 5px;
+}
 .popular-goods ul,
 .popular-producers-list {
   display: grid;
@@ -447,7 +454,6 @@ user-navigation a {
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 70px;  /*Убрать, когда разберусь, почему у секции не работает маргин боттом*/
   position: relative;
   overflow: hidden;
 }
@@ -462,7 +468,8 @@ user-navigation a {
   flex-basis: 183px;
   vertical-align: middle;
   display: flex;
-  align-items: center;
+  align-items: start;
+  margin-top: 6px;
 }
 
  .popular-goods-card-product h3 {
@@ -470,7 +477,7 @@ user-navigation a {
   line-height: 20px;
   color: var(--basic-black);
   max-width: 185px;
-  margin: 0 auto;
+  margin: -7px auto 0 auto;
  }
 .popular-goods-card-product-old-price {
   font-size: 17px;
@@ -480,10 +487,14 @@ user-navigation a {
   margin-bottom: 13px;
 }
 .popular-goods-card-product-button {
-  background-image: url(../img/red-button.png);
+  background: url(../img/red-button.png) no-repeat;
   width: 141px;
   height: 30px;
-  padding-top: 8px;
+  padding-top: 7px;
+  margin-left: 44px;
+  margin-top: 2px;
+  text-align: left;
+  padding-left: 35px;
 }
 /*Популярные производители*/
 .popular-producers {
@@ -510,6 +521,7 @@ user-navigation a {
   min-height: 522px;
   background-color: var(--services-background-color);
   color: var(--basic-black);
+  margin-top: 67px;
 }
 .services h2 {
   color: var(--basic-black);
@@ -521,7 +533,7 @@ user-navigation a {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
-  margin-bottom: 75px;
+  margin-bottom: 69px;
 }
 
 .services-tab {
@@ -534,8 +546,8 @@ user-navigation a {
 .services-tab button {
   display: block;
   background-color: inherit;
-  font-weight: 700px;
   font-size: 21px;
+  font-weight: 700;
   line-height: 30px;
   padding-left: 22px;
   padding-top: 13px;
@@ -560,13 +572,22 @@ user-navigation a {
 }
 .tabcontent {
   float: left;
-  padding: 0px 12px;
+  padding: 0;
+  padding-left: 24px;
   border: 1px solid inherit;
   border-left: none;
   width: 619px;
   min-height: 283px;
   margin-left: 60px;
-  background: url(../img/delivery.png) no-repeat 100% 10px;
+}
+#Delivery {
+  background: url(../img/delivery.png) no-repeat 100% 20px;
+}
+#Guarantee {
+  background: url(../img/bg-garanty.png) no-repeat 100% 20px;
+}
+#Credit {
+  background: url(../img/bg-credit.png) no-repeat 100% 20px;
 }
 .tabcontent h3 {
   margin-top: 0;
@@ -585,18 +606,29 @@ user-navigation a {
 .about-company h2,
 .contacts-company h2 {
   color: var(--basic-black);
-  padding-top: 70px;
+  padding-top: 45px;
+}
+.about-company h2 {
+  margin-bottom: 23px;
 }
 .about-company p,
 .contacts-company p {
   margin-bottom: 0;
 }
 .about-company .indent {
-  margin-bottom: 30px;
+  margin-bottom: 27px;
+}
+.about-company ul {
+  margin: 0;
+  margin-top: 2px;
+  margin-bottom: 7px;
+  padding: 0;
 }
 .about-company li {
   font-size: 18px;
   padding-bottom: 12px;
+  padding-left: 36px;
+  background: url(../img/icons/dot.png) no-repeat 0 11px;
 }
 .about-company .red-button-link {
   width: 220px;
@@ -604,8 +636,8 @@ user-navigation a {
 .contacts-company .map {
   width: 300px;
   height: 158px;
-  margin-top: 50px;
-  margin-bottom: 30px;
+  margin-top: 32px;
+  margin-bottom: 24px;
   background: url("../img/road-map.jpg") ;
 }
 .contacts-company .red-button-link {
@@ -642,6 +674,11 @@ footer {
   flex-wrap: wrap;
   padding-left: 0;
   flex: 1 0 30%;
+  margin-top: 30px;
+  font-size: 18px;
+}
+.footer-navigation li {
+  margin: 8px auto;
 }
 .footer-center-block a {
   color: var(--footer-center-block-menu);
@@ -650,6 +687,14 @@ footer {
 }
 .footer-center-block ul {
   margin: 0 auto;
+}
+footer .main-navigation li:first-child,
+.footer-navigation li:first-child {
+  margin-left: 0;
+}
+footer .main-navigation li:last-child,
+.footer-navigation li:last-child {
+  margin-right: 0;
 }
 .footer-center-block p {
   margin: 0;
@@ -672,16 +717,17 @@ footer {
 .copyright {
   margin: 0;
   line-height: 18px;
-  margin-top: 36px;
+  margin-top: 25px;
 }
 
 .social-networks {
   position: relative;
-  margin-left: 50px;
+  margin-left: 43px;
   width: 134px;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+  margin-top: 32px;
 }
 
 
@@ -690,14 +736,17 @@ footer {
   justify-content: flex-end;
   flex-wrap: wrap;
   margin-right: 10px;
-  margin-top: 35px;
+  margin-top: 28px;
 }
-.links p {
-}
+
 .links a {
   color: var(--footer-center-block-menu);
+}
+.links .feedback {
   line-height: 18px;
 }
 .links .developed {
   margin-left: 51px;
+  margin-right: 5px;
+  line-height: 18px;
 }
