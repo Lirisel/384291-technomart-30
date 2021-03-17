@@ -571,6 +571,7 @@ user-navigation a {
 }
 .popular-goods-card-product:hover .back {
   display: block;
+  background-color: #fff;
 }
 .popular-goods-card-product a {
   display: flex;
