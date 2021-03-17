@@ -569,6 +569,9 @@ user-navigation a {
   overflow: hidden;
   padding-bottom: 21px;
 }
+.popular-goods-card-product:hover .back {
+  display: block;
+}
 .popular-goods-card-product a {
   display: flex;
   flex-direction: column;
