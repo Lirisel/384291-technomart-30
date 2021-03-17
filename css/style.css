@@ -573,9 +573,9 @@ user-navigation a {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
- }
 
- .popular-goods-card-product-image {
+ }
+.popular-goods-card-product-image  {
   order: -1;
   flex-basis: 183px;
   vertical-align: middle;
@@ -583,29 +583,22 @@ user-navigation a {
   flex-wrap: wrap;
   align-items: start;
   margin-top: 6px;
-  position: relative;
   justify-content: center;
 }
-.front,
-.back {
-  width: 218px;
-  height: 183px;
-  order: -1;
-}
-.front {
-  position: relative;
-}
-.back {
+.popular-goods-card-product-image.front:hover {
   display: none;
   position: absolute;
 }
-.front:hover {
+.popular-goods-card-product-image.back {
   display: none;
+  position: absolute;
 }
-.back:hover {
+.popular-goods-card-product-image.back:hover {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  top: 30px;
+  position: absolute;
 }
 .buy {
   padding: 7px 32px 7px 54px;
@@ -662,6 +655,7 @@ user-navigation a {
   color: var(--basic-black);
   max-width: 185px;
   margin: -7px auto 0 auto;
+  order: 0;
  }
 .popular-goods-card-product-old-price {
   font-size: 17px;
@@ -1276,10 +1270,13 @@ textarea::placeholder {
 }
 .sorting-items {
   color: var(--light-grey);
-
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+}
+.sorting-items a {
+  color: var(--light-grey);
 }
 .sorting-items:hover,
 .sorting-items:hover .active {
@@ -1321,6 +1318,7 @@ textarea::placeholder {
   box-sizing: border-box;
   margin-right: 16px;
   margin-bottom: 18px;
+  position: relative;
 }
 .catalog-items .popular-goods-card-product:nth-child(3n) {
   margin-right: 0;
