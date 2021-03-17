@@ -569,7 +569,7 @@ user-navigation a {
   overflow: hidden;
   padding-bottom: 21px;
 }
-.popular-goods-card-product:hover .back {
+.popular-goods-card-product:hover popular-goods-card-product-image-back {
   display: block;
   background-color: #fff;
   width: 218px;
@@ -583,7 +583,6 @@ user-navigation a {
 
  }
 .popular-goods-card-product-image  {
-  order: -1;
   flex-basis: 183px;
   vertical-align: middle;
   display: flex;
