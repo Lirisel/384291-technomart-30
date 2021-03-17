@@ -596,11 +596,11 @@ user-navigation a {
   display: none;
   position: absolute;
 }
-.popular-goods-card-product-image.back {
+.popular-goods-card-product-image-back {
   display: none;
   position: absolute;
 }
-.popular-goods-card-product-image.back:hover {
+.popular-goods-card-product-image-back:hover {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
