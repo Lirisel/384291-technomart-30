@@ -572,8 +572,9 @@ user-navigation a {
 .popular-goods-card-product:hover .back {
   display: block;
   background-color: #fff;
-  width: 100%;
-  height: 100%;
+  width: 218px;
+  height: 164px;
+  outline: 1px solid red;
 }
 .popular-goods-card-product a {
   display: flex;
