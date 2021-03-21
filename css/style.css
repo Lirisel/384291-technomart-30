@@ -162,14 +162,18 @@ address {
 .search-button:focus,
 .search-form input:focus,
 .search-form input:focus::placeholder,
-.search-form input:focus .search-button {
+.search-form:focus .search-button path {
+  background-color: var(--basic-white);
+  color: var(--basic-black);
+  fill: var(--basic-red);
+  outline: none;
+}
+/*.search-form input:focus .search-button  {
+  fill: var(--basic-red);
   background-color: var(--basic-white);
   color: var(--basic-black);
   outline: none;
-}
-.search-form input:focus .search-button path {
-  fill: var(--basic-red);
-}
+}*/
 
 /*Юзерменю в верхнем блоке хедера*/
 .user-navigation {
