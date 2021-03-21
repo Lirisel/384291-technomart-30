@@ -156,14 +156,13 @@
         </div>
         <ul>
           <li class="popular-goods-card-product">
-            <div class="popular-goods-card-product-image-back"><!--На вот этот блок-->
+            <div class="popular-goods-card-product-image-back">
               <a class="buy" href="#">Купить</a>
               <a class="to-bookmarks" href="#">В закладки</a>
             </div>
-              <div class="popular-goods-card-product-image front"><!--Вот этот блок должен меняться-->
+              <div class="popular-goods-card-product-image front">
                 <img src="img/goods/snippet-32961.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
               </div>
-
               <h3>Перфоратор BOSCH BFG 9000</h3>
               <p class="popular-goods-card-product-old-price">
                 <s>32500 Р.</s>
@@ -171,51 +170,55 @@
               <p class="popular-goods-card-product-button">
                 25500 Р.
               </p>
-
-
           </li>
 
           <li class="popular-goods-card-product new">
-            <a href="#">
-              <h3>Перфоратор BOSCH BFG 3000</h3>
-              <p class="popular-goods-card-product-image">
+            <div class="popular-goods-card-product-image-back">
+              <a class="buy" href="#">Купить</a>
+              <a class="to-bookmarks" href="#">В закладки</a>
+            </div>
+              <div class="popular-goods-card-product-image front">
                 <img src="img/goods/snippet-18927-1.jpg"  width="218" height="128" alt="Перфоратор BOSCH BFG 3000">
-              </p>
+              </div>
+              <h3>Перфоратор BOSCH BFG 3000</h3>
               <p class="popular-goods-card-product-old-price">
                 <s>22500 Р.</s>
               </p>
               <p class="popular-goods-card-product-button">
                 15500 Р.
               </p>
-            </a>
           </li>
           <li class="popular-goods-card-product">
-            <a href="#">
-              <h3>Перфоратор BOSCH BFG 6000</h3>
-              <p class="popular-goods-card-product-image">
+            <div class="popular-goods-card-product-image-back">
+              <a class="buy" href="#">Купить</a>
+              <a class="to-bookmarks" href="#">В закладки</a>
+            </div>
+              <div class="popular-goods-card-product-image front">
                 <img src="img/goods/snippet-945-1.jpg"  width="218" height="128" alt="Перфоратор BOSCH BFG 6000">
-              </p>
+              </div>
+              <h3>Перфоратор BOSCH BFG 6000</h3>
               <p class="popular-goods-card-product-old-price">
                 <s>30500 Р.</s>
               </p>
               <p class="popular-goods-card-product-button">
                 25500 Р.
               </p>
-            </a>
           </li>
           <li class="popular-goods-card-product new">
-            <a href="#">
-              <h3>Перфоратор BOSCH BFG 2000</h3>
-              <p class="popular-goods-card-product-image">
+            <div class="popular-goods-card-product-image-back">
+              <a class="buy" href="#">Купить</a>
+              <a class="to-bookmarks" href="#">В закладки</a>
+            </div>
+              <div class="popular-goods-card-product-image front">
                 <img src="img/goods/snippet-18927-1.jpg"  width="218" height="128" alt="Перфоратор BOSCH BFG 3000">
-              </p>
+              </div>
+              <h3>Перфоратор BOSCH BFG 2000</h3>
               <p class="popular-goods-card-product-old-price">
                 <s>22500 Р.</s>
               </p>
               <p class="popular-goods-card-product-button">
                 12500 Р.
               </p>
-            </a>
           </li>
         </ul>
       </section>
@@ -286,7 +289,7 @@
             <li>Автотрейдинг</li>
             <li>ЖелДорЭкспедиция</li>
           </ul>
-          <a class="red-button-link " href="#">Подробнее о компании</a>
+          <a class="red-button-link company-button-about" href="#">Подробнее о компании</a>
         </section>
 
         <section class="contacts-company">
@@ -295,13 +298,13 @@
             заехав в наш офис:</p>
           <!--Карта-->
           <section class="map"><h2 class="visually-hidden">Схема проезда</h2><img src="img/road-map.jpg" width="300" height="158" alt=""></section>
-          <a class="red-button-link" href="#">Заблудились? НапиШИТЕ НАМ!</a>
+          <a class="red-button-link contacts-button-map" href="#">Заблудились? НапиШИТЕ НАМ!</a>
         </section>
 
       </div>
       <section class="modal modal-email">
         <h2 class="visually-hidden">Отправить письмо</h2>
-        <form method="post" name="contact_form" action="contact-form-handler.php">
+        <form class="contact-form" method="post" name="contact_form" action="contact-form-handler.php">
           <div class="modal-email-top">
             <p>
               <label class="form_item" for="username">Ваше имя:</label>
@@ -313,7 +316,7 @@
             </p>
           </div>
           <p class="form_item">Текст письма:
-		    	    <textarea name="message" placeholder="В свободной форме"></textarea>
+		    	    <textarea id="email_text" name="message" placeholder="В свободной форме"></textarea>
           </p>
           <button class="red-button-link" type="submit">Отправить</button>
         </form>
@@ -322,7 +325,7 @@
 
       <section class="modal modal-map">
         <h2 class="visually-hidden">Заблудились? НапиШИТЕ НАМ!</h2>
-        <img src="img/modal-map.jpg" alt="Офис компании по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="943" height="449">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" width="943" height="449" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
         <button class="modal-close" type="button" aria-label="Закрыть"></button>
       </section>
     </main>
@@ -348,9 +351,11 @@
               </ul>
           </div>
           <div class="footer-center-block">
-            <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
-                  +7 (812) 555-05-55</p>
-            <ul class="footer-navigation">
+            <div class="footer-contacts">
+              <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+              <a href="tel:+78125550555"> +7 (812) 555-05-55</a>
+            </div>
+            <ul class="footer-navigation-second">
               <li><a href="#">Материалы</a></li>
               <li><a href="#">Техника</a></li>
               <li><a href="#">Инструмент</a></li>
