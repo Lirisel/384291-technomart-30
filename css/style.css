@@ -903,10 +903,12 @@ footer {
 .footer-navigation li:first-child {
   padding-left: 0;
 }
-.footer-navigation li:hover {
+.footer-navigation li:hover,
+.footer-navigation-second li:hover {
   text-decoration-line: underline;
 }
-.footer-navigation li:active {
+.footer-navigation li:active,
+.footer-navigation-second li:active {
   opacity: 0.5;
   text-decoration: none;
 }
