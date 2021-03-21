@@ -128,7 +128,7 @@ address {
   padding-left: 12px;*/
   position: relative;
   min-width: 269px;
-  outline: 1px solid red;
+
 }
 .search-button {
   background-color: var(--dark-header-color);
@@ -145,8 +145,9 @@ address {
 .search-form input{
   background-color: var(--dark-header-color);
     border: none;
-    padding-top: 13px;
     padding-left: 41px;
+    width: 100%;
+    height: 100%;
 }
 .search-form input::placeholder {
   background-color: var(--dark-header-color);
@@ -160,14 +161,16 @@ address {
 .search-form:focus,
 .search-button:focus,
 .search-form input:focus,
-.search-form input:focus::placeholder {
+.search-form input:focus::placeholder,
+.search-form input:focus .search-button {
   background-color: var(--basic-white);
   color: var(--basic-black);
   outline: none;
 }
-.search-button path:focus {
+.search-form input:focus .search-button path {
   fill: var(--basic-red);
 }
+
 /*Юзерменю в верхнем блоке хедера*/
 .user-navigation {
   display: flex;
