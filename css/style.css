@@ -168,6 +168,9 @@ address {
   fill: var(--basic-red);
   outline: none;
 }
+.search-form:focus-within .search-button-img {
+  fill: red;
+}
 /*.search-form input:focus .search-button  {
   fill: var(--basic-red);
   background-color: var(--basic-white);
