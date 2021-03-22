@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.min.css">
 
+
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/32.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/favicon-180.png">
@@ -106,7 +107,13 @@
                 <button class="slider-item-button button-left" type="button"><img src="img/icons/icon-left.png" width="21" height="39" alt="Назад"></button>
                 <button class="slider-item-button button-rught" type="button"><img src="img/icons/icon-right.png" width="21" height="39" alt="Вперед"></button>
               </div>
-              <a class="red-button-link red-button-link-slider" href="catalog.html">ОТКРЫТЬ КАТАЛОГ</a>
+              <div class="slider-bottom-block">
+                <a class="red-button-link red-button-link-slider" href="catalog.html">ОТКРЫТЬ КАТАЛОГ</a>
+                <div class="slider-dots-list">
+                  <div class="slider-dots-item"></div>
+                  <div class="slider-dots-item active"></div>
+                </div>
+              </div>
             </div>
             <!--Второй слайдер-->
             <div class="slider-item slider-2 visually-hidden">
@@ -232,13 +239,13 @@
         </div>
         <div class="popular-producers-list">
           <div class="popular-producers-item"><a href="#"><img src="img/partner-logo/bosch.jpg"  width="126" height="37" alt="BOSCH"></a></div>
-          <div class="popular-producers-item"><a href="#"><img src="img/partner-logo/Makita.jpg"  width="123" height="40" alt="Makita"></a></div>
-          <div class="popular-producers-item"><a href="#"><img src="img/partner-logo/DeWALT.jpg"  width="146" height="44" alt="DeWALT"></a></div>
-          <div class="popular-producers-item"><a href="#"><img src="img/partner-logo/Interskol-1.jpg"  width="200" height="75" alt="Интерскол"></a></div>
-          <div class="popular-producers-item"><a href="#"><img src="img/partner-logo/Hitachi.jpg"  width="169" height="31" alt="Hitachi"></a></div>
-          <div class="popular-producers-item"><a href="#"><img src="img/partner-logo/LG.jpg"  width="121" height="73" alt="LG"></a></div>
-          <div class="popular-producers-item"><a href="#"><img src="img/partner-logo/AEG.jpg"  width="151" height="96" alt="AEG"></a></div>
-          <div class="popular-producers-item"><a href="#"><img src="img/partner-logo/Metabo.jpg" width="204" height="69" alt="Metabo"></a></div>
+          <div class="popular-producers-item"><a href="#"><img src="img/partner-logo/makita.jpg"  width="123" height="40" alt="Makita"></a></div>
+          <div class="popular-producers-item"><a href="#"><img src="img/partner-logo/dewalt.jpg"  width="146" height="44" alt="DeWALT"></a></div>
+          <div class="popular-producers-item"><a href="#"><img src="img/partner-logo/interskol-1.jpg"  width="200" height="75" alt="Интерскол"></a></div>
+          <div class="popular-producers-item"><a href="#"><img src="img/partner-logo/hitachi.jpg"  width="169" height="31" alt="Hitachi"></a></div>
+          <div class="popular-producers-item"><a href="#"><img src="img/partner-logo/lg.jpg"  width="121" height="73" alt="LG"></a></div>
+          <div class="popular-producers-item"><a href="#"><img src="img/partner-logo/aeg.jpg"  width="151" height="96" alt="AEG"></a></div>
+          <div class="popular-producers-item"><a href="#"><img src="img/partner-logo/metabo.jpg" width="204" height="69" alt="Metabo"></a></div>
         </div>
       </section>
     </div>
@@ -255,14 +262,14 @@
               <button class="services-button" type="button" onclick="openService(event, 'Guarantee')">Гарантия</button>
               <button class="services-button" type="button" onclick="openService(event, 'Credit')">Кредит</button>
             </div>
-            <div id="Delivery" class="tabcontent">
+            <div id="Delivery" class="tabcontent delivery">
               <h3>Доставка</h3>
               <p>Мы с удовольствием доставим ваш товар прямо<br>
                 к вашему подъезду совершенно бесплатно!<br>
                 Ведь мы неплохо заработаем,<br>
                 поднимая его на ваш этаж!</p>
             </div>
-            <div id="Guarantee" class="tabcontent">
+            <div id="Guarantee" class="tabcontent guarantee">
               <h3>Гарантия</h3>
               <p>Если купленный у нас товар поломается или заискрит, <br>
                 а также в случае пожара, спровоцированного его возгоранием, <br>
@@ -270,10 +277,11 @@
                 Мы обменяем сгоревший товар на новый. <br>
                 Дом уж восстановите как-нибудь сами.</p>
             </div>
-            <div id="Credit" class="tabcontent">
+            <div id="Credit" class="tabcontent credit">
               <h3>Кредит</h3>
               <p>Залезть в долговую яму стало проще! <br>
                   Кредитные консультанты придут вам на помощь.</p>
+              <a class="red-button-link" href="#">отправить заявку</a>
             </div>
 
         </div>
@@ -317,8 +325,9 @@
               <input id="email" type="email" name="email" placeholder="email@example.com">
             </p>
           </div>
-          <p class="form_item">Текст письма:
-		    	    <textarea id="email_text" name="message" placeholder="В свободной форме"></textarea>
+          <p class="form_item">
+            <label for="email_text">Текст письма:</label>
+		    	  <textarea id="email_text" name="message" placeholder="В свободной форме"></textarea>
           </p>
           <button class="red-button-link" type="submit">Отправить</button>
         </form>
