@@ -324,14 +324,16 @@ user-navigation a {
 .header-registration:hover {
   color: var(--basic-red);
 }
-.header-login:hover svg {
+.header-login:hover path {
   fill: var(--header-login);
 }
 .header-login:active,
 .header-registration:active {
   color: var(--light-grey);
 }
-
+.header-login:active path {
+  fill: var(--light-grey);
+}
 .header-registration {
   padding-right: 22px;
   padding-left: 24px;
