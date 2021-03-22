@@ -599,11 +599,6 @@ user-navigation a {
   justify-content: center;
   min-height: 164px;
 }
-.popular-goods-card-product-image.front:hover {
-  /*display: none;
-  position: absolute;*/
-}
-
 .popular-goods-card-product-image-back {
   display: none;
   position: absolute;
