@@ -124,8 +124,6 @@ address {
 }
 /*Поиск в верхнем блоке хедера*/
 .search-form {
-  /*padding-right: 97px;
-  padding-left: 12px;*/
   position: relative;
   min-width: 269px;
 
