@@ -171,6 +171,13 @@ address {
 .search-form:focus-within .search-button-img {
   fill: red;
 }
+.shape-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.shape-wrapper:focus-within .search-form .search-button-img {
+  fill: red;
+}
 /*.search-form input:focus .search-button  {
   fill: var(--basic-red);
   background-color: var(--basic-white);
