@@ -577,10 +577,10 @@ user-navigation a {
   margin-top: 5px;
 }
 .slider-item-button {
-  background-color: var(--basic-black);
+  background-color: var(--header-color);
   border: none;
 }
-.slider-buttons{
+.slider-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -591,11 +591,11 @@ user-navigation a {
       flex-wrap: wrap;
   margin-bottom: 34px;
 }
-.button-left {
+.slider-buttons .button-left {
   margin-left: 18px;
   background-color: none;
 }
-.button-rught {
+.slider-buttons .button-rught {
   margin-right: 15px;
   background-color: none;
 }
@@ -1018,7 +1018,7 @@ user-navigation a {
   min-height: 283px;
   margin-left: 60px;
 }
-.delivery {
+.deliverys {
   background: url(../img/delivery.png) no-repeat 100% 20px;
 }
 .guarantee {
